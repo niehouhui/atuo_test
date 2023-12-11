@@ -1,0 +1,17 @@
+{
+  "frpServer": {
+    "host": "tj.fiber-doctor.com:4040",
+    "port": 22.0
+  },
+  "messageId": "b4dbf50a-36a5-445c-adcd-dfc1fee42a64",
+  "modelInfo": {
+    "manufacturers": "FiberDoctor",
+    "model": "OFIRE-V3",
+    "softwareVersion": "1.0"
+  },
+  "sn": "21050199541",
+  "wifi": {
+    "password": "50199def",
+    "ssid": "FD50199541"
+  }
+}
