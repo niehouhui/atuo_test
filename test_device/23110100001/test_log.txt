@@ -1,0 +1,7 @@
+test_log print:
+get_cmd 用例1 ：测试成功
+get_cmd 用例2 ：测试成功
+V_set_cmd 用例1 ：测试成功
+V_set_cmd 用例2 ：测试成功
+V_set_cmd 用例3 ：测试成功
+V_set_cmd 用例4 ：测试成功

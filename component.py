@@ -194,7 +194,7 @@ def check_for_ERROR(file_path,error_str):
         return False
 
 def mqtt_cmd_test(folder,device_id,device_model,sn) :
-    V_model_list = ["OFIRE-V3","OFIRE-V3-32","OFIRE-V3-64","OFIRE-V3A","OFIRE-V3A-32","OFIRE-V3A-64",]
+    V_model_list = ["OFIRE-V3","OFIRE-V3-32","OFIRE-V3-64","OFIRE-V3A","OFIRE-V3A-32","OFIRE-V3A-64","OFIRE-V4A"]
     P_model_list = ["OFIRE-P2-V3","OFIRE-P5-V3"]
     topic_send=f"/{device_id}/send"
     topic_recv= f"/{device_id}/recv"
@@ -220,12 +220,13 @@ def mqtt_cmd_test(folder,device_id,device_model,sn) :
     StopReportOpticalPower_cmd=read_specific_cell("./preprocess_cmd.csv", 2, 2)
     StopReportOpticalPower_cmd = set_slot(StopReportOpticalPower_cmd,Otdr_slot,OpticSwitcher_slot,Rcu_slot,PowerMeter_slot)
     mqtt_publish(topic_recv,StopReportOpticalPower_cmd)
+    
     if device_model in P_model_list:
         csv_list = ["get_cmd","P_set_cmd","task_cmd"]
     elif device_model in V_model_list :
-        # csv_list = ["get_cmd","V_set_cmd","task_cmd"]
-        csv_list = ["task_cmd"]
-
+        csv_list = ["get_cmd","V_set_cmd","task_cmd"]
+    else :
+        print("型号不在测试列表中！！！！！！")
     for csv_file in csv_list :
         time.sleep(0.5)
         file_path = f"./{csv_file}.csv"
@@ -238,12 +239,12 @@ def mqtt_cmd_test(folder,device_id,device_model,sn) :
             mqtt_publish(topic_recv,msg_recv)
             time.sleep(0.3)
             count = 0
-            while  flag == get_flag() and count<3 :
+            while  flag == get_flag() and count<4 :
                 count = count + 1
                 time.sleep(0.2)
             else:
                 log_file_path = f"./test_device/{folder}/test_log.txt"  
-                if count <3 :                            
+                if count <4 :                            
                     msg_send = get_mqtt_msg()
                     json_send = json.loads(msg_send[4:])
                     json_send_std = json.loads(msg_send_std[4:])

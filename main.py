@@ -12,13 +12,18 @@ if __name__ == "__main__":
     folders = [folder for folder in current_directory if os.path.isdir(os.path.join(folder_path, folder))]
     print("Folders in the current directory:")
     mqtt_init("fiber-doctor.com", 1883, "guest", "guest") #不能放到循环中，循环中反复连接会大概率连接失败，接收不到信息
-
+    result_file_path = f"./test_device/test_result.txt"
+    try:
+        with open(result_file_path, 'w') as file:
+            file.write(f"test_log print:\n")
+    except Exception as e:
+            print(f"An error occurred: {str(e)}")
+            
     for folder in folders:
         print(f"文件夹 {folder} test start")
         folder_path=f"./test_device/{folder}"
         log_file_path = f"./test_device/{folder}/test_log.txt"  
-        result_file_path = f"./test_device/test_result.txt"
-        for file in [folder_path,log_file_path,result_file_path] :
+        for file in [folder_path,log_file_path] :
             try:
                 with open(file, 'w') as file:
                     file.write(f"test_log print:\n")
@@ -27,7 +32,7 @@ if __name__ == "__main__":
 
         device_id,device_model,sn =  get_info_from_lic(folder_path)
         print(f"{device_id}\n{device_model}\n{sn}")
-        V_model_list = ["OFIRE-V3","OFIRE-V3-32","OFIRE-V3-64","OFIRE-V3A","OFIRE-V3A-32","OFIRE-V3A-64",]
+        V_model_list = ["OFIRE-V3","OFIRE-V3-32","OFIRE-V3-64","OFIRE-V3A","OFIRE-V3A-32","OFIRE-V3A-64", "OFIRE-V4A"]
         P_model_list = ["OFIRE-P2-V3","OFIRE-P5-V3"]
         if device_model in P_model_list + V_model_list :
             mqtt_cmd_test(folder,device_id,device_model,sn)
@@ -38,7 +43,13 @@ if __name__ == "__main__":
             # tcp_cmd_test(ip)
             #check_test_result()
 
-            ###下面代码封装成函数
+
+
+
+
+
+            ##mqtt_cmd_test部分 
+            # 下面代码封装成函数
             # topic_send=f"/{device_id}/send"
             # topic_recv= f"/{device_id}/recv"
             # mqtt_subscribe(topic_send)
