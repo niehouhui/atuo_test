@@ -193,9 +193,10 @@ def check_for_ERROR(file_path,error_str):
         print(f"An error occurred: {e}")
         return False
 
+from main import P_model_list, V_model_list 
+
 def mqtt_cmd_test(folder,device_id,device_model,sn) :
-    V_model_list = ["OFIRE-V3","OFIRE-V3-32","OFIRE-V3-64","OFIRE-V3A","OFIRE-V3A-32","OFIRE-V3A-64","OFIRE-V4A"]
-    P_model_list = ["OFIRE-P2-V3","OFIRE-P5-V3"]
+
     topic_send=f"/{device_id}/send"
     topic_recv= f"/{device_id}/recv"
     mqtt_subscribe(topic_send)
