@@ -1,0 +1,129 @@
+﻿命令类型,命令更改描述,测试命令,预期返回结果,,,,,,,,,,,,,,,,
+切换光开关SwitchSwitcher（命令，S->C）,正常测试,"J01N{
+  ""_type"": ""SwitchSwitcher"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": ""AD16""
+  },
+  ""branchPortName"": ""1""
+}","J01N{
+        ""_type"":        ""SwitcherSwitched"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        ""AD16""
+        },
+        ""branchPortName"":        1
+}",,,,,,,,,,,,,,,,
+切换光开关SwitchSwitcher（命令，S->C）,”branchPortName“键值设为较大数值，如”999“,"J01N{
+  ""_type"": ""SwitchSwitcher"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": ""AD16""
+  },
+  ""branchPortName"": ""999""
+}","T01N{
+        ""_type"":        ""SwitcherFailure"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        ""AD16""
+        },
+        ""error"":        {
+                ""message"":        ""光开关获取路数保存错误 ""
+        }
+}",,,,,,,,,,,,,,,,
+ 开始OTDR测试（命令，S->C）,正常测试,"J01N{
+  ""_type"": ""StartOtdrTestAndSwitchSwitcher"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""Mqtt"",
+      ""extraElements"": null
+    },
+    ""executionDevice"": null,
+    ""slot"": ""AD15""
+  },
+  ""testParam"": {
+    ""waveLengthNm"": 1550.0,
+    ""pulseWidthNs"": ""10000"",
+    ""rangeKm"": 100.0,
+    ""pointSpacingM"": 0.0,
+    ""averagesTime"": 60,
+    ""ior"": 0.0,
+    ""extraElements"": null
+  },
+  ""testId"": ""caecdb08-e30f-184e-bd12-9a1d7e81e5da"",
+  ""switcherConfigs"": [
+    {
+      ""slot"": ""AD16"",
+      ""controlInfo"": {
+        ""deviceId"": ""c9759cbe-9e8a-434c-90ef-86142b591f08"",
+        ""connectionType"": ""Ethernet"",
+        ""controlAddress"": ""192.168.1.180"",
+        ""controlProtocol"": ""Mqtt"",
+        ""extraElements"": null
+      },
+      ""branchPortName"": ""01"",
+      ""extraElements"": null
+    }
+  ],
+  ""isProxy"": false
+}","J01N{
+        ""_type"":        ""OtdrTestStarted"",
+        ""testId"":        ""caecdb08-e30f-184e-bd12-9a1d7e81e5da"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""Mqtt""
+                },
+                ""executionDevice"":        null,
+                ""slot"":        ""AD15""
+        }
+}",,,,,,,,,,,,,,,,

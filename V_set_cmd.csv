@@ -1,0 +1,643 @@
+﻿命令类型,命令更改描述,测试命令,预期返回结果,,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,正常命令，功能测试,"J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": ""debug""
+    },
+    ""ntpConfig"": {
+    ""isActivate"": 1,
+    ""serverHost"": ""ntp1.aliyun.com""
+    },
+    ""updateConfig"": {
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/debug/"",
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,防错测试命令，“baseConfig”中的”consoleLevel“的键值改为 1 或其他任意数值，,"J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": 1
+    },
+    ""ntpConfig"": {
+    ""isActivate"": 1,
+    ""serverHost"": ""ntp1.aliyun.com""
+    },
+    ""updateConfig"": {
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/debug/"",
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,防错测试命令，“baseConfig”中的”consoleLevel“的键值改为 null,"J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": null
+    },
+    ""ntpConfig"": {
+    ""isActivate"": 1,
+    ""serverHost"": ""ntp1.aliyun.com""
+    },
+    ""updateConfig"": {
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/debug/"",
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,防错命令测试，“ntpConfig”中的“isActivate”数值改为123  或其他任意数值,"J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": ""debug""
+    },
+    ""ntpConfig"": {
+    ""isActivate"": 123,
+    ""serverHost"": ""ntp1.aliyun.com""
+    },
+    ""updateConfig"": {
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/debug/"",
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,防错测试命令，“ntpConfig”中的”isActivate“的键值改为“test-string”或其他任意字符串，,"J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": ""debug""
+    },
+    ""ntpConfig"": {
+    ""isActivate"": ""test-string"",
+    ""serverHost"": ""ntp1.aliyun.com""
+    },
+    ""updateConfig"": {
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/debug/"",
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,防错测试命令，“ntpConfig”中的”isActivate“的键值改为null,"J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": ""debug""
+    },
+    ""ntpConfig"": {
+    ""isActivate"": null,
+    ""serverHost"": ""ntp1.aliyun.com""
+    },
+    ""updateConfig"": {
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/debug/"",
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,"”ntpConfig“ 和“update Config“中的””serverHost""地址改为null ","J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": ""debug""
+    },
+    ""ntpConfig"": {
+    ""isActivate"": 1,
+    ""serverHost"": null
+    },
+    ""updateConfig"": {
+    ""serverHost"": null,
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,"”ntpConfig“ 和“update Config“中的””serverHost""地址改为123 或其他数值","J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": ""debug""
+    },
+    ""ntpConfig"": {
+    ""isActivate"": 1,
+    ""serverHost"": 123
+    },
+    ""updateConfig"": {
+    ""serverHost"": 123,
+    ""updateIntervalS"": 3600
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置配置（事件，S->D）,防错测试命令，“updateConfig”中的”updateIntervalS“的键值改为123或其他任意数值,"J01N{
+  ""_type"": ""SetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+    ""baseConfig"": {
+    ""consoleLevel"": ""debug""
+    },
+    ""ntpConfig"": {
+    ""isActivate"": 1,
+    ""serverHost"": ""ntp1.aliyun.com""
+    },
+    ""updateConfig"": {
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/debug/"",
+    ""updateIntervalS"": 123
+    }
+}","J01N{
+        ""_type"":        ""SetConfigFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        }
+}",,,,,,,,,,,,,,,,
+设置时间（事件，S->D）,防错测试命令，时间戳timestamp为32位整数，输入负数值如-987654321，,"J01N{
+  ""_type"": ""SetTime"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+  ""timestamp"": -987654321
+}","J01N{
+        ""_type"":        ""SetTimeFailure"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""error"":        {
+                ""message"":        ""同步时间失败""
+        }
+}",,,,,,,,,,,,,,,,
+设置时间（事件，S->D）,防错测试命令，时间戳timestamp为32位整数，输入字符串如”test-stringtest-string“，,"J01N{
+  ""_type"": ""SetTime"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+  ""timestamp"": ""test-sting""
+}","J01N{
+        ""_type"":        ""SetTimeFailure"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""error"":        {
+                ""message"":        ""同步时间失败""
+        }
+}",,,,,,,,,,,,,,,,
+设置时间（事件，S->D）,防错测试命令，时间戳timestamp为32位整数，输入null,"J01N{
+  ""_type"": ""SetTime"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+  ""timestamp"": null
+}","J01N{
+        ""_type"":        ""SetTimeFailure"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""error"":        {
+                ""message"":        ""同步时间失败""
+        }
+}",,,,,,,,,,,,,,,,
+设置时间（事件，S->D）,正常命令，功能测试,"J01N{
+  ""_type"": ""SetTime"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+  ""timestamp"": 123456789
+}","J01N{
+        ""_type"":        ""SetTimeFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.178"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.178"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""timestamp"":        123456789
+}",,,,,,,,,,,,,,,,
+设置时间（事件，S->D）,防错测试命令，时间戳timestamp为32位整数，输入超出10位范围数值如987654321012345，,"J01N{
+  ""_type"": ""SetTime"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+  ""timestamp"": 987654321012345
+}","J01N{
+        ""_type"":        ""SetTimeFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""timestamp"":        2147483647
+}",,,,,,,,,,,,,,,,
+设置时间（事件，S->D）,防错测试命令，时间戳timestamp为32位整数，输入浮点数值如9876.54321，,"J01N{
+  ""_type"": ""SetTime"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  },
+  ""timestamp"": 9876.54321
+}","J01N{
+        ""_type"":        ""SetTimeFinished"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""timestamp"":        9876
+}",,,,,,,,,,,,,,,,

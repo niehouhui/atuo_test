@@ -1,0 +1,17 @@
+{
+  "frpServer": {
+    "host": "tj.fiber-doctor.com:4040",
+    "port": 22.0
+  },
+  "messageId": "739c1fe6-82bd-4e92-a10d-cb964b057a17",
+  "modelInfo": {
+    "manufacturers": "FiberDoctor",
+    "model": "OFIRE-V3A-32",
+    "softwareVersion": "1.0"
+  },
+  "sn": "22010190522",
+  "wifi": {
+    "password": "10190dd0",
+    "ssid": "FD10190522"
+  }
+}

@@ -1,0 +1,104 @@
+﻿命令类型,命令更改描述,测试命令,预期返回结果,,,,,,,,,,,,,,,,
+获取网络信息（命令，S->/D）,正常命令，功能测试,"J01N{
+  ""_type"": ""GetNetworkInfo"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  }
+}","J01N{
+        ""_type"":        ""NetworkInfo"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""type"":        ""wired"",
+        ""ip"":        ""192.168.1.180"",
+        ""mask"":        ""255.255.255.0"",
+        ""gateway"":        ""192.168.1.1"",
+        ""dns"":        ""8.8.8.8"",
+        ""signalStrength"":        null,
+        ""supportOperator"":        [""CMCC"", ""CTCC"", ""CUCC""]
+}",,,,,,,,,,,,,,,,
+获取配置（事件，S->D）,正常命令，功能测试,"J01N{
+  ""_type"": ""GetConfig"",
+  ""target"": {
+    ""controlDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""executionDevice"": {
+      ""deviceId"": null,
+      ""connectionType"": ""Ethernet"",
+      ""controlAddress"": ""192.168.1.180"",
+      ""controlProtocol"": ""GLHY""
+    },
+    ""slot"": null
+  }
+}","J01N{
+        ""_type"":        ""Config"",
+        ""source"":        {
+                ""controlDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""executionDevice"":        {
+                        ""deviceId"":        null,
+                        ""connectionType"":        ""Ethernet"",
+                        ""controlAddress"":        ""192.168.1.180"",
+                        ""controlProtocol"":        ""GLHY""
+                },
+                ""slot"":        null
+        },
+        ""config"":        {
+                ""baseConfig"":        {
+                        ""deviceId"":        ""c9759cbe-9e8a-434c-90ef-86142b591f08"",
+                        ""serverHost"":        ""ssl://fiber-doctor.com:8883"",
+                        ""serverUser"":        ""guest"",
+                        ""serverPassword"":        ""guest"",
+                        ""consoleLevel"":        ""debug"",
+                        ""mqttQos"":        ""1""
+                },
+                ""ntpConfig"":        {
+                        ""isActivate"":        1,
+                        ""serverHost"":        ""http://fiber-doctor.com/ntpserver""
+                },
+                ""updateConfig"":        {
+                        ""serverHost"":        ""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
+                        ""updateIntervalS"":        3600
+                },
+                ""customConfig"":        {
+                        ""defaultEth"":        1,
+                        ""referralEth"":        1,
+                        ""otdrModel"":        ""ae3100"",
+                        ""oswTotalPort"":        32,
+                        ""opmTotalPort?"":        32,
+                        ""smartCard"":        1
+                }
+        }
+}",,,,,,,,,,,,,,,,
