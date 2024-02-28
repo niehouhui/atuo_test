@@ -1,4 +1,6 @@
 
+from asyncio.windows_events import NULL
+from contextlib import nullcontext
 import csv
 from email import message
 from http import client
@@ -200,11 +202,30 @@ def mqtt_cmd_test(folder,device_id,device_model,sn) :
     topic_send=f"/{device_id}/send"
     topic_recv= f"/{device_id}/recv"
     mqtt_subscribe(topic_send)
-    GetComponentList_cmd=read_specific_cell("./preprocess_cmd.csv", 1, 2)
+    GetComponentList_cmd=read_specific_cell("./command_csv/preprocess_cmd.csv", 1, 2)
     mqtt_publish(topic_recv,GetComponentList_cmd)
     time.sleep(1)
-    DeviceComponentList =get_DeviceComponentList() 
-    json_CompontentList = json.loads(DeviceComponentList[4:])
+        
+    try:
+    # 假设 get_DeviceComponentList() 返回一个有效的 JSON 字符串
+        DeviceComponentList = get_DeviceComponentList()
+#     # 验证数据（可选）
+#         if not DeviceComponentList.startswith("{"):
+#             print("DeviceComponentList 不以 '{' 开头，这表示它不是 JSON 数据。")
+#         # 根据你的需求适当处理这种情况。
+
+#     # 解析 JSON
+        json_CompontentList = json.loads(DeviceComponentList[4:])
+#     print(json_CompontentList)  # 打印解析后的数据
+
+    except json.JSONDecodeError as e:
+        print(f"解析 JSON 时出错：{e}")
+        print(f"可能是无消息回复，如设备离线！！")
+    # 处理错误（例如记录日志、返回默认值等）
+
+    # DeviceComponentList =get_DeviceComponentList() 
+    # json_CompontentList = json.loads(DeviceComponentList[4:])
+    # todo  设备离线无消息回复时，会报错！！
     Otdr_slot = OpticSwitcher_slot = Rcu_slot = PowerMeter_slot = "AD15"
     if json_CompontentList["_type"] == "DeviceComponentList" :
         componentList  = json_CompontentList.get("componentList",[])
@@ -218,7 +239,7 @@ def mqtt_cmd_test(folder,device_id,device_model,sn) :
             elif component["_type"] == "PowerMeter" :
                 PowerMeter_slot = component["slot"]
      
-    StopReportOpticalPower_cmd=read_specific_cell("./preprocess_cmd.csv", 2, 2)
+    StopReportOpticalPower_cmd=read_specific_cell("./command_csv/preprocess_cmd.csv", 2, 2)
     StopReportOpticalPower_cmd = set_slot(StopReportOpticalPower_cmd,Otdr_slot,OpticSwitcher_slot,Rcu_slot,PowerMeter_slot)
     mqtt_publish(topic_recv,StopReportOpticalPower_cmd)
     
@@ -230,7 +251,7 @@ def mqtt_cmd_test(folder,device_id,device_model,sn) :
         print("型号不在测试列表中！！！！！！")
     for csv_file in csv_list :
         time.sleep(0.5)
-        file_path = f"./{csv_file}.csv"
+        file_path = f"./command_csv/{csv_file}.csv"
         row_number = get_row_number(file_path)
         for row in range(1,row_number):
             msg_recv = read_specific_cell(file_path, row, 2)                

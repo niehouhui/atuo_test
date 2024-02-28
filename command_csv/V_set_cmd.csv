@@ -24,7 +24,7 @@
     ""serverHost"": ""ntp1.aliyun.com""
     },
     ""updateConfig"": {
-    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-p3-v1x/debug/"",
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
     ""updateIntervalS"": 3600
     }
 }","J01N{
@@ -70,7 +70,7 @@
     ""serverHost"": ""ntp1.aliyun.com""
     },
     ""updateConfig"": {
-    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-p3-v1x/debug/"",
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
     ""updateIntervalS"": 3600
     }
 }","J01N{
@@ -116,7 +116,7 @@
     ""serverHost"": ""ntp1.aliyun.com""
     },
     ""updateConfig"": {
-    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-p3-v1x/debug/"",
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
     ""updateIntervalS"": 3600
     }
 }","J01N{
@@ -162,7 +162,7 @@
     ""serverHost"": ""ntp1.aliyun.com""
     },
     ""updateConfig"": {
-    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-p3-v1x/debug/"",
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
     ""updateIntervalS"": 3600
     }
 }","J01N{
@@ -208,7 +208,7 @@
     ""serverHost"": ""ntp1.aliyun.com""
     },
     ""updateConfig"": {
-    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-p3-v1x/debug/"",
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
     ""updateIntervalS"": 3600
     }
 }","J01N{
@@ -254,7 +254,7 @@
     ""serverHost"": ""ntp1.aliyun.com""
     },
     ""updateConfig"": {
-    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-p3-v1x/debug/"",
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
     ""updateIntervalS"": 3600
     }
 }","J01N{
@@ -392,7 +392,7 @@
     ""serverHost"": ""ntp1.aliyun.com""
     },
     ""updateConfig"": {
-    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-p3-v1x/debug/"",
+    ""serverHost"":""http://tj.fiber-doctor.com:57029/ofire-s-v3x/release-with-fust2/"",
     ""updateIntervalS"": 123
     }
 }","J01N{
